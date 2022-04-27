@@ -4,124 +4,106 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 01</title>
+    <title>Module 02 theory</title>
 
-    <style>
-      .list {
-        display: flex;
-      }
-      .picture-1 {
-        border: 2px solid tomato;
-      }
-      .picture-2 {
-        border: 2px dashed hotpink;
-      }
-    </style>
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!-- Шапка сайту -->
-    <header>
-      <!-- Головна навігація сторінки -->
-      <nav>
-        <ul>
-          <li>
-            <a href="">Link 1</a>
+    <header class="header active">
+      <nav class="main-navigation">
+        <ul class="header-list">
+          <li class="header-item">
+            <a class="header-link active" id="main-link" href="#features"
+              >Link 1</a
+            >
+            <ul class="inner-list">
+              <li class="inner-item">
+                <a class="link" href="">Some link</a>
+              </li>
+              <li class="inner-item">
+                <a class="link" href="">Some link</a>
+              </li>
+            </ul>
           </li>
-          <li>
-            <a href="">Link 2</a>
+          <li class="item">
+            <a class="link" href="#technology">Link 2</a>
           </li>
-          <li>
-            <a href="">Link 3</a>
+          <li class="item">
+            <a class="link" href="#price">Link 3</a>
+          </li>
+          <li class="item">
+            <a class="link" href="#clients">Link 4</a>
           </li>
         </ul>
       </nav>
+      <ul class="list">
+        <li class="item">
+          <button class="btn" type="button">Click me</button>
+        </li>
+        <li class="item">
+          <button class="btn" type="button">Click me</button>
+        </li>
+      </ul>
+      <p class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium,
+        accusantium? Minus quibusdam sed iusto. Incidunt sit eum quos voluptate,
+        voluptas itaque sequi repellendus ipsa? Cupiditate maiores inventore
+        iure reprehenderit illo.
+      </p>
     </header>
-
-    <!-- Основний унікальний розділ -->
     <main>
-      <!-- Основний будівельний блок для розділів сторінки -->
-      <section>
-        <!-- Групування медіа-контенту за допомогою div -->
-        <div>
-          <ul class="list">
-            <li>
-              <!-- відносний шлях до файлу зображення -->
-              <img
-                class="picture-1"
-                src="./images/section-1/img-1.jpg"
-                alt="Послуга гоління бороди"
-                width="270"
-              />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-            </li>
-            <li>
-              <!-- абсолютний шлях до файлу зображення -->
-              <img
-                class="picture-2"
-                src="https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJhbHxlbnwwfHwwfHw%3D&w=1000&q=80"
-                alt="Послуга гоління небезпечним лезом"
-                width="270"
-                height="445"
-              />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Групування текстового контенту за допомогою div -->
-        <div>
-          <h2>Lorem ipsum dolor sit.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
-            delectus atque debitis necessitatibus quia, numquam possimus? Quo
-            aperiam laboriosam obcaecati error sapiente quaerat saepe at
-            expedita. Atque amet modi sit.
-          </p>
-          <p>
-            Lorem ipsum dolor <span>sit amet consectetur</span> adipisicing
-            elit. Alias placeat beatae molestiae voluptate veritatis vitae aut
-            cupiditate neque quas tempore mollitia asperiores, repellendus optio
-            ipsam, sequi aliquid. Aut, vero repellendus?
-          </p>
-
-          <ol>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-          </ol>
-
-          <ul>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-          </ul>
-
-          <button type="button">Click me!</button>
-        </div>
+      <section class="hero">
+        <h1 class="hero-title">Lorem ipsum dolor sit.</h1>
+        <p class="hero-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptas?
+        </p>
+        <button class="hero-btn" type="reset">Click me</button>
+      </section>
+      <section style="height: 100vh" id="features">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+          id asperiores repellat nemo cupiditate cum, delectus, reiciendis,
+          praesentium odit rerum minus amet nobis quam voluptatum eligendi enim
+          omnis! Deserunt qui harum vel quod laudantium totam voluptatibus!
+          Recusandae eligendi accusamus ducimus molestiae at dolor dolorem nam.
+          Delectus voluptates quod tempore quas!
+        </p>
+      </section>
+      <section style="height: 100vh" id="technology">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+          id asperiores repellat nemo cupiditate cum, delectus, reiciendis,
+          praesentium odit rerum minus amet nobis quam voluptatum eligendi enim
+          omnis! Deserunt qui harum vel quod laudantium totam voluptatibus!
+          Recusandae eligendi accusamus ducimus molestiae at dolor dolorem nam.
+          Delectus voluptates quod tempore quas!
+        </p>
+      </section>
+      <section style="height: 100vh" id="price">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+          id asperiores repellat nemo cupiditate cum, delectus, reiciendis,
+          praesentium odit rerum minus amet nobis quam voluptatum eligendi enim
+          omnis! Deserunt qui harum vel quod laudantium totam voluptatibus!
+          Recusandae eligendi accusamus ducimus molestiae at dolor dolorem nam.
+          Delectus voluptates quod tempore quas!
+        </p>
+      </section>
+      <section style="height: 100vh" id="clients">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+          id asperiores repellat nemo cupiditate cum, delectus, reiciendis,
+          praesentium odit rerum minus amet nobis quam voluptatum eligendi enim
+          omnis! Deserunt qui harum vel quod laudantium totam voluptatibus!
+          Recusandae eligendi accusamus ducimus molestiae at dolor dolorem nam.
+          Delectus voluptates quod tempore quas!
+        </p>
       </section>
     </main>
-
-    <!-- Футер сайту -->
     <footer>
-      <!-- Блок місцезнаходження і контактів компанії -->
-      <address>
-        <ul>
-          <li><a href="" target="_blank" rel="noopener noreferrer">We are from Ukraine!)</a></li>
-          <li>
-            <a href="tel:380991112233" target="_blank" rel="noopener noreferrer"
-              >+38(099) 111-22-33</a
-            >
-          </li>
-          <li>
-            <a
-              href="mailto:company@mail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >company@mail.com</a
-            >
-          </li>
-        </ul>
+      <address class="footer-address">
+        <p>© copyright 2022</p>
       </address>
     </footer>
   </body>

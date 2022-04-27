@@ -1,0 +1,161 @@
+/* селектор {
+  властивість: значення;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* селектор тега */
+body {
+  /* color: grey; */
+  /* background-color: chocolate; */
+  /* font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.6); */
+}
+
+.link {
+  color: grey;
+}
+
+.link.active {
+  color: blue;
+}
+
+/* ul {
+  list-style: none;
+}
+
+p {
+  font-size: 20px;
+  color: blueviolet;
+}
+
+button {
+  background-color: black;
+  color: white;
+} */
+
+/* селектор класу */
+/* .link {
+  color: hotpink;
+} */
+
+/* .title {
+  color: tomato;
+}
+
+.btn {
+  background-color: teal;
+}
+
+.section-btn {
+  background-color: blueviolet;
+  color: white;
+} */
+
+/* селектор id */
+/* #features {
+  background-color: azure;
+}
+
+#technology {
+  background-color: rgb(81, 98, 179);
+} */
+
+/* селектор атрибуту */
+/* button[type="button"] {
+  font-size: 25px;
+} */
+
+/* комбінація селекторів */
+/* .header .main-navigation {
+  background-color: thistle;
+}
+
+.header .item {
+  font-size: 30px;
+} */
+/*
+.list button {
+  color: red;
+}
+
+.list .link {
+  color: blueviolet;
+}
+
+.list > .link {
+  color: red;
+} */
+
+/* .list > li {
+  background-color: black;
+  margin-bottom: 30px;
+}
+
+.list li {
+  background-color: red;
+  margin-bottom: 30px;
+} */
+
+/* вибирається елемент, у якого одночасно є два вказані класи */
+/* .header.list {
+  padding: 10px;
+}
+
+.link {
+  color: black;
+}
+
+.link.active {
+  color: blue;
+} */
+
+/* .header .text:hover {
+  color: white;
+  background-color: blueviolet;
+}
+
+.link {
+  color: tomato;
+} */
+
+/* .link:hover,
+.link:focus {
+  color: teal;
+  color: #008080;
+  color: rgb(0, 128, 128);
+  color: rgba(0, 182, 182, 0.6);
+}
+
+.link:active {
+  color: aquamarine;
+  color: #212121;
+}
+
+.link:visited {
+  color: red;
+} */
+
+/* a {
+  color: white;
+}
+
+.link {
+  color: #008080;
+} */
+
+.title {
+}
+
+.hero-title {
+}
+
+.header-link {
+  color: rgb(57, 140, 159);
+}
+
+.header-link.current {
+  color: red;
+}
