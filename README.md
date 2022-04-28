@@ -1,14 +1,21 @@
 # Frontend online 55
 
-Занятья 1:
-- HTML - мова розмітки документа, структура, контент сторінки
-- Теги та атрибути
-- Cкелет HTML-документа: doctype, html, head, body
-- Метаінформація документа: title, meta
-- Поняття семантичної розмітки
-- Розмітка тексту: p, h1...h6, ol/ul, a
-- Зображення: img и figure
-- Секційні теги: header, footer, main, section, nav, article, aside
-- Абсолютний та відносний шлях до файлу
-- Валідація HTML-документа
-- Інструменти розробника: Chrome DevTools. Вкладки Elements, Console, Sources, Network.
+Заняття 4:
+
+- Абсолютні одиниці вимірювання: px
+- Властивості оформелння тексту: text-align, text-decoration, text-transform, text-indent,
+  line-height, letter-spacing, word-spacing, text-shadow
+- Сімейства шрифту serif та sans-serif
+- Властивості оформлення шрифту: font-size, font-weight, font-style, font-family
+- Псевдоелементи текстового контенту ::firstLetter та ::selection
+- Підключення зовнішніх шрифтів через GoogleFonts
+
+Додатково:
+
+- CSS-змінні та селектор :root
+- Як винести загальні властивості кольорів та набори шрифтів в змінні
+- Переваги зберігання цих властивостей в палітрі
+- Підключення шрифтів з GoogleFonts, опції (жирність, стиль, символи)
+- Підключення набору з декількох шрифтів одним посиланням
+- Підключення локальных шрифтів
+- Директива @font-face та властивість font-display

@@ -4,35 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 01 practice</title>
+    <title>Module 02 practice</title>
+    <!-- Project fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Шапка сайту -->
     <header class="header">
-      <a href="./index.html" aria-label="Логотип сайта BarberShop">
+      <a class="logo" href="./index.html" aria-label="Логотип сайта BarberShop">
         <img src="./images/header/logo.png" alt="Логитип" width="69" height="56" />
       </a>
 
       <nav class="navigtion">
-        <ul class="list">
-          <li class="item">
-            <a class="link" href="#"> О нас</a>
+        <ul class="navigtion-list list">
+          <li class="navigtion-item">
+            <a class="link navigtion-link" href="#">О нас</a>
           </li>
-          <li class="item">
-            <a class="link" href="#">Услуги и цены</a>
+          <li class="navigtion-item">
+            <a class="link navigtion-link" href="#">Услуги и цены</a>
           </li>
-          <li class="item">
-            <a class="link" href="#">Мастера</a>
+          <li class="navigtion-item">
+            <a class="link navigtion-link" href="#">Мастера</a>
           </li>
-          <li class="item">
-            <a class="link" href="#">Контакты</a>
+          <li class="navigtion-item">
+            <a class="link navigtion-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
 
       <div class="header-gruop">
-        <a href="tel:380441111111">+38 044 111 11 11</a>
-        <button type="button">онлайн-запись</button>
+        <a class="link header-phone" href="tel:380441111111">+38 044 111 11 11</a>
+        <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
       </div>
     </header>
     <main>
@@ -56,14 +65,14 @@
         </ul>
         <div class="hero-group">
           <p class="uppertitle" lang="en">A hair salon for men in Kyiv</p>
-          <h1 class="hero-title" lang="en">BarberShop</h1>
+          <h1 class="main-title" lang="en">BarberShop</h1>
           <p class="subtitle">
             Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
           </p>
         </div>
         <ul class="list">
           <li class="item">
-            <button class="slider-btn" type="button">Назад</button>
+            <button class="slider-btn slider-btn-disable" type="button">Назад</button>
           </li>
           <li class="item">
             <button class="slider-btn" type="button">Вперед</button>
@@ -104,7 +113,7 @@
             которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать
             каждого, кто к нам приходит!
           </p>
-          <button class="btn" type="button">онлайн-запись</button>
+          <button class="btn btn-mode-light" type="button">онлайн-запись</button>
         </div>
       </section>
       <!-- Секція Послуги та ціни -->
@@ -113,7 +122,7 @@
         <h2 class="section-title">Услуги и цены</h2>
         <ul class="list">
           <li class="item">
-            <ul class="inner-list">
+            <ul class="inner-list list">
               <li class="inner-item">Мужская стрижка от 300 грн.</li>
               <li class="inner-item">Стрижка бороды от 200 грн.</li>
               <li class="inner-item">Стрижка усов от 200 грн.</li>
@@ -121,7 +130,7 @@
             </ul>
           </li>
           <li class="item">
-            <ul class="inner-list">
+            <ul class="inner-list list">
               <li class="inner-item">Cтрижка у стажера от 50 грн.</li>
               <li class="inner-item">Стрижка под насадку от 200 грн.</li>
               <li class="inner-item">Детская стрижка (до 12 лет) от 300 грн.</li>
@@ -129,25 +138,25 @@
             </ul>
           </li>
         </ul>
-        <button class="btn" type="button">онлайн-запись</button>
+        <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
       </section>
       <!-- Секція Переваги -->
       <section class="benefits">
         <ul class="list">
           <li class="item">
-            <p class="benefits-amount">600 <sup>+</sup></p>
+            <p class="benefits-amount">600 <sup class="benefits-amount-decor">+</sup></p>
             <p class="benefits-text">Довольных клиентов в день</p>
           </li>
           <li class="item">
-            <p class="benefits-amount">20 <sup>+</sup></p>
+            <p class="benefits-amount">20 <sup class="benefits-amount-decor">+</sup></p>
             <p class="benefits-text">Лучших мастеров Киева</p>
           </li>
           <li class="item">
-            <p class="benefits-amount">50 <sup>+</sup></p>
+            <p class="benefits-amount">50 <sup class="benefits-amount-decor">+</sup></p>
             <p class="benefits-text">Наград за отличный сервис</p>
           </li>
           <li class="item">
-            <p class="benefits-amount">100<sup>+</sup></p>
+            <p class="benefits-amount">100<sup class="benefits-amount-decor">+</sup></p>
             <p class="benefits-text">Подарков постоянным клиентам</p>
           </li>
         </ul>
@@ -164,7 +173,7 @@
       <section class="team">
         <p class="uppertitle">для настоящих ценителей атмосферы</p>
         <h2 class="section-title">Наши мастера</h2>
-        <ul class="member-list">
+        <ul class="member-list list">
           <li class="member-item">
             <img
               class="member-img"
@@ -176,24 +185,24 @@
             <div class="member-group">
               <h3 class="member-title" lang="en">John Smith</h3>
               <p class="member-position" lang="en">Extreme Barber</p>
-              <ul class="socials">
+              <ul class="socials list">
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
-                    >instagrm</a
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
+                    >instagram</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >twitter</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >facebook</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >linkedin</a
                   >
                 </li>
@@ -211,24 +220,24 @@
             <div class="member-group">
               <h3 class="member-title" lang="en">Michele Doe</h3>
               <p class="member-position" lang="en">Extreme Barber</p>
-              <ul class="socials">
+              <ul class="socials list">
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
-                    >instagrm</a
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
+                    >instagram</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >twitter</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >facebook</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >linkedin</a
                   >
                 </li>
@@ -246,24 +255,24 @@
             <div class="member-group">
               <h3 class="member-title" lang="en">Alan Black</h3>
               <p class="member-position" lang="en">Extreme Barber</p>
-              <ul class="socials">
+              <ul class="socials list">
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
-                    >instagrm</a
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
+                    >instagram</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >twitter</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >facebook</a
                   >
                 </li>
                 <li class="socials-item">
-                  <a class="socials-link" href="" target="_blank" rel="noopener noreferrer"
+                  <a class="socials-link link" href="" target="_blank" rel="noopener noreferrer"
                     >linkedin</a
                   >
                 </li>
@@ -275,7 +284,7 @@
       <!-- Секція Галерея -->
       <section class="gallery">
         <p class="uppertitle">На латинском языке “барба” означает “борода”</p>
-        <h2 class="section-title" hidden>Галерея работ</h2>
+        <h2 class="section-title visually-hidden">Галерея работ</h2>
         <ul class="list">
           <li class="item">
             <img

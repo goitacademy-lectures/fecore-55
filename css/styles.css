@@ -1,0 +1,373 @@
+:root {
+  --main-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* text colors */
+  --accent-cl: #ff6c00;
+  --main-txt-cl: #555555;
+  --secondary-txt-cl: #ffffff;
+
+  /* bacground colors */
+  --main-bg-cl: #ffffff;
+  --secondary-bg-cl: #f7f7f7;
+  --dark-bg-cl: #191c26;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+
+  color: var(--main-txt-cl);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #ffffff;
+  background-color: var(--accent-cl);
+}
+
+.btn-mode-light {
+  color: #303030;
+}
+
+.btn-mode-dark {
+  color: #ffffff;
+}
+
+.slider-btn {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: right;
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.slider-btn-disable {
+  text-align-last: left;
+
+  color: rgba(157, 164, 189, 0.6);
+}
+
+/*
+============================
+| Header section
+============================
+*/
+.header {
+  background-color: #191c26;
+}
+
+.navigtion-link,
+.header-phone {
+  font-weight: 600;
+  font-size: 12px;
+
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--secondary-txt-cl);
+}
+
+/*
+============================
+| Hero section
+============================
+*/
+.hero {
+  background-color: #191c26;
+}
+
+.hero .link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #303030;
+}
+
+.hero .link:hover,
+.hero .link:focus {
+  color: var(--accent-cl);
+}
+
+.hero .uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero .main-title {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+.hero .subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+
+  color: #9da4bd;
+}
+
+/*
+============================
+| About section
+============================
+*/
+.about .uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #303030;
+}
+
+.about .section-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+
+.about .subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+
+  color: #555555;
+}
+/*
+============================
+| Price section
+============================
+*/
+.price {
+  background-color: #111319;
+}
+
+.price .uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.price .section-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+
+.price .inner-list {
+  font-size: 18px;
+  line-height: 1.67;
+
+  color: #9da4bd;
+}
+
+/*
+============================
+| Benefits section
+============================
+*/
+.benefits-amount {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+.benefits-amount-decor {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+
+  color: #ff6c00;
+}
+.benefits-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+
+  color: #303030;
+}
+.benefits .uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #303030;
+}
+
+.benefits .section-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+
+.benefits .subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+
+  color: #555555;
+}
+
+/*
+============================
+| Team section
+============================
+*/
+
+.team {
+  background-color: #f7f7f7;
+}
+.team .uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #303030;
+}
+
+.team .section-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+
+.member-title {
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+
+  color: #303030;
+}
+.member-position {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+
+  color: #ff6c00;
+}
+/*
+============================
+| Gallery section
+============================
+*/
+.gallery .uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #303030;
+}
+
+.gallery .section-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+/*
+============================
+| Footer section
+============================
+*/
+.footer .copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #9da4bd;
+}
+.footer .link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #303030;
+}
+
+.footer .link:hover,
+.footer .link:focus {
+  color: var(--accent-cl);
+}
