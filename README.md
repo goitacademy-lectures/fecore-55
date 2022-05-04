@@ -1,3 +1,12 @@
 # Frontend online 55
 
-[Посилання на макет Barbershop](https://www.figma.com/file/Q30fUPk88NasVE5g3XNDxr/Barbershop_v1?node-id=1%3A2)
+Заняття 5:
+
+- Потік документа
+- Рядкові та блокові елементи
+- Блокова модель елемента: content, padding, border, margin
+- Властивості width та height
+- Модель візуального форматування: box-sizing
+- Типи боксів: блокові, рядкові, рядково-блокові. Властивість display
+- Схлопування і випадіння вертикальних маржинів
+- Структурні псевдокласи: first/last-сhild, nth-child/nth-last-child
