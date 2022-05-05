@@ -1,0 +1,131 @@
+body {
+  font-family: sans-serif;
+}
+
+.box {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* justify-content: center;
+  align-items: center; */
+  /* align-content: flex-start; */
+
+  /**
+    |============================
+  flex-direction: row;  напрямок основної осі
+  flex-wrap: nowrap; перенос елементів на основній осі
+  justify-content: flex-start; вирівнювання елементів вздовж основної осі
+  align-items: stretch; вирівнювання елементів вздовж допоміжної осі
+  align-content: stretch; вирівнювання рядків вздовж допоміжної осі
+    |============================
+  */
+
+  background-color: blueviolet;
+  width: 80vw;
+  height: 600px;
+
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.inner-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* flex-grow: 0; */
+  flex-shrink: 0;
+
+  outline: 1px solid red;
+
+  text-align: center;
+  color: blueviolet;
+  /* line-height: 120px; */
+
+  /* font-size: 2em; */
+
+  /* margin: 20px; */
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.inner-box:nth-child(1) {
+  background-color: darkblue;
+  /* order: 2; */
+}
+
+.inner-box:nth-child(2) {
+  /* align-self: flex-end; */
+  /* order: 1; */
+  background-color: tomato;
+  /* font-size: 3em; */
+}
+.inner-box:nth-child(3) {
+  /* order: -1; */
+  background-color: teal;
+}
+
+.sidebar {
+  width: 120px;
+  height: 100%;
+  background-color: #fff;
+
+  border: 10px solid tomato;
+  border-radius: 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+
+  /* width: 200px; */
+  height: 100%;
+  background-color: #fff;
+  border: 10px dotted teal;
+  border-radius: 20px;
+}
+
+/**
+  |============================
+  | Porfolio filter buttons
+  |============================
+*/
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  outline: 1px solid red;
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.portfolio .list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio .item {
+  margin-right: 8px;
+}
+.portfolio .item:last-child {
+  margin-right: 0;
+}
+
+.filter-btn {
+  padding: 6px 22px;
+  border: none;
+  background-color: #f5f4fa;
+  border-radius: 6px;
+  cursor: pointer;
+}

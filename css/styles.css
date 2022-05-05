@@ -2,12 +2,13 @@
   --main-font: 'Open Sans', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
 
+  --1: #ffff35;
   /* text colors */
   --accent-cl: #ff6c00;
   --main-txt-cl: #555555;
   --secondary-txt-cl: #ffffff;
 
-  /* bacground colors */
+  /* background colors */
   --main-bg-cl: #ffffff;
   --secondary-bg-cl: #f7f7f7;
   --dark-bg-cl: #191c26;
@@ -20,6 +21,20 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--main-txt-cl);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
 }
 
 .visually-hidden {
@@ -35,6 +50,23 @@ body {
   margin: -1px;
 }
 
+.container {
+  outline: 1px solid red;
+
+  width: 1200px;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -42,9 +74,16 @@ body {
 
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .btn {
+  padding: 12px 20px;
+  max-width: 200px;
+  min-width: 160px;
+  min-height: 40px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -52,6 +91,8 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
+  border: 1px solid var(--accent-cl);
+  border-radius: 25px;
   background-color: transparent;
   cursor: pointer;
 }
@@ -71,6 +112,10 @@ body {
 }
 
 .slider-btn {
+  width: 60px;
+  height: 24px;
+  padding: 0;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -79,25 +124,71 @@ body {
 
   color: #ffffff;
   background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--secondary-txt-cl);
+  cursor: pointer;
 }
 
 .slider-btn-disable {
-  text-align-last: left;
+  text-align: left;
 
   color: rgba(157, 164, 189, 0.6);
+  border-color: rgba(157, 164, 189, 0.6);
 }
 
-/*
-============================
-| Header section
-============================
+/**
+  |============================
+  | Header section
+  |============================
 */
 .header {
   background-color: #191c26;
 }
 
-.navigtion-link,
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 71px;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-item {
+  margin-right: 40px;
+}
+
+.navigation-item:last-child {
+  margin-right: 0;
+}
+
+.navigation-link {
+  color: var(--secondary-txt-cl);
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  color: var(--accent-cl);
+}
+
+.header-gruop {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.navigation-link,
 .header-phone {
+  display: block;
+
+  padding-top: 52px;
+  padding-bottom: 52px;
+
   font-weight: 600;
   font-size: 12px;
 
@@ -107,13 +198,34 @@ body {
   color: var(--secondary-txt-cl);
 }
 
-/*
-============================
-| Hero section
-============================
+.header-phone {
+  margin-right: 40px;
+}
+
+.header-phone:hover,
+.header-phone:focus {
+  color: var(--accent-cl);
+}
+
+/**
+  |============================
+  | Hero section
+  |============================
 */
 .hero {
   background-color: #191c26;
+}
+
+.hero .list {
+  display: flex;
+  align-items: center;
+}
+
+.hero .item {
+  margin-right: 40px;
+}
+.hero .item:last-child {
+  margin-right: 0;
 }
 
 .hero .link {
@@ -130,7 +242,13 @@ body {
   color: var(--accent-cl);
 }
 
+.hero-group {
+  width: 476px;
+}
+
 .hero .uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -141,6 +259,8 @@ body {
 }
 
 .hero .main-title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 72px;
@@ -157,12 +277,36 @@ body {
   color: #9da4bd;
 }
 
-/*
-============================
-| About section
-============================
+/**
+  |============================
+  | About section
+  |============================
 */
+
+.about-container {
+  display: flex;
+}
+
+.about .list {
+  display: flex;
+  margin-right: 64px;
+}
+
+.about .item {
+  margin-right: 30px;
+}
+
+.about .item:last-child {
+  margin-right: 0;
+}
+
+.about-group {
+  width: 500px;
+}
+
 .about .uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -173,6 +317,8 @@ body {
 }
 
 .about .section-title {
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 42px;
   line-height: 1.16;
@@ -182,16 +328,23 @@ body {
 }
 
 .about .subtitle {
+  margin-bottom: 20px;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
 
   color: #555555;
 }
-/*
-============================
-| Price section
-============================
+
+.about .description {
+  margin-bottom: 40px;
+}
+
+/**
+  |============================
+  | Price section
+  |============================
 */
 .price {
   background-color: #111319;
@@ -223,10 +376,10 @@ body {
   color: #9da4bd;
 }
 
-/*
-============================
-| Benefits section
-============================
+/**
+  |============================
+  | Benefits section
+  |============================
 */
 .benefits-amount {
   font-weight: 700;
@@ -280,12 +433,11 @@ body {
   color: #555555;
 }
 
-/*
-============================
-| Team section
-============================
+/**
+  |============================
+  | Team section
+  |============================
 */
-
 .team {
   background-color: #f7f7f7;
 }
@@ -322,10 +474,11 @@ body {
 
   color: #ff6c00;
 }
-/*
-============================
-| Gallery section
-============================
+
+/**
+  |============================
+  | Gallery section
+  |============================
 */
 .gallery .uppertitle {
   font-weight: 600;
@@ -345,11 +498,17 @@ body {
 
   color: #303030;
 }
-/*
-============================
-| Footer section
-============================
+
+/**
+  |============================
+  | Footer section
+  |============================
 */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
 .footer .copyright {
   font-weight: 600;
   font-size: 11px;
