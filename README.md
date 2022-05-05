@@ -2,7 +2,7 @@
 
 Заняття 6:
 
-- flex-контейнер ти flex-елемент.
+- flex-контейнер та flex-елемент
 - Властивість display:flex|inline-flex
 - Flex-вісі та властивість flex-direction
 - Вирівнювання flex-елементів на вісі, властивості justify-content, align-items
