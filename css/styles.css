@@ -2,7 +2,6 @@
   --main-font: 'Open Sans', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
 
-  --1: #ffff35;
   /* text colors */
   --accent-cl: #ff6c00;
   --main-txt-cl: #555555;
@@ -12,6 +11,10 @@
   --main-bg-cl: #ffffff;
   --secondary-bg-cl: #f7f7f7;
   --dark-bg-cl: #191c26;
+
+  /* grid items */
+  --items: 1;
+  --indent: 30px;
 }
 
 body {
@@ -21,6 +24,9 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--main-txt-cl);
+
+  /* background-image: url(../images/stock.jpg); */
+  /* background-size: 300px 300px; */
 }
 
 h1,
@@ -35,6 +41,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -51,7 +59,7 @@ img {
 }
 
 .container {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 
   width: 1200px;
 
@@ -76,6 +84,22 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+/**
+  |============================
+  | Сітка для колекції з елементів
+  |============================
+*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: var(--indent);
+}
+
+.grid-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
 
 .btn {
@@ -307,6 +331,9 @@ img {
 .about .uppertitle {
   margin-bottom: 20px;
 
+  display: flex;
+  align-items: center;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -314,6 +341,16 @@ img {
   text-transform: uppercase;
 
   color: #303030;
+}
+
+.about .uppertitle::before {
+  content: '';
+  margin-right: 20px;
+
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #111319;
 }
 
 .about .section-title {
@@ -347,7 +384,17 @@ img {
   |============================
 */
 .price {
-  background-color: #111319;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: #111319; */
+  /* Фонове зображення + градієнт */
+  background-image: url(../images/price/bg-price.png), linear-gradient(to bottom, #191c26, #191c26);
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-size: cover;
 }
 
 .price .uppertitle {
@@ -369,7 +416,16 @@ img {
   color: #ffffff;
 }
 
-.price .inner-list {
+.price-list {
+  display: flex;
+}
+
+.price-item {
+  flex-basis: 50%;
+  padding: 30px 40px;
+}
+
+.price-inner-list {
   font-size: 18px;
   line-height: 1.67;
 
@@ -460,6 +516,10 @@ img {
   color: #303030;
 }
 
+.member-item {
+  --items: 3;
+}
+
 .member-title {
   font-size: 18px;
   line-height: 1.39;
@@ -497,6 +557,37 @@ img {
   letter-spacing: 0.05em;
 
   color: #303030;
+}
+
+.gallery .list {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 30px; */
+  /* margin-right: -30px; */
+  margin: -15px;
+}
+
+.gallery .item {
+  /* margin-right: 30px; */
+  margin: 15px;
+  flex-basis: calc((100% - 120px) / 4);
+}
+/* .gallery .item:last-child {
+  margin-right: 0;
+} */
+
+/**
+  |============================
+  | Contacts section
+  |============================
+*/
+.contacts {
+  height: 644px;
+  background-color: var(--dark-bg-cl);
+  background-image: url(../images/contacts/bg-contacts.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left calc(50% + 312px);
 }
 
 /**
