@@ -17,6 +17,11 @@
   --indent: 30px;
 }
 
+/* Плавниий скролінг до секції */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--main-font);
   font-size: 14px;
@@ -343,6 +348,10 @@ img {
   color: #303030;
 }
 
+.about .uppertitle:hover {
+  color: #ff6c00;
+}
+
 .about .uppertitle::before {
   content: '';
   margin-right: 20px;
@@ -351,6 +360,10 @@ img {
   width: 60px;
   height: 1px;
   background-color: #111319;
+}
+
+.about .uppertitle:hover::before {
+  background-color: #ff6c00;
 }
 
 .about .section-title {
@@ -563,7 +576,14 @@ img {
   --items: 3;
 }
 
+.member-group {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .member-title {
+  margin-bottom: 8px;
+
   font-size: 18px;
   line-height: 1.39;
   text-align: center;
@@ -571,12 +591,57 @@ img {
   color: #303030;
 }
 .member-position {
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
 
   color: #ff6c00;
 }
+
+/* Social icons */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: #ffffff;
+  color: #303030;
+
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: #ff6c00;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/* .socials-icon {
+  fill: #303030;
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: #ff6c00;
+} */
 
 /**
   |============================
@@ -682,4 +747,70 @@ img {
 .footer .link:hover,
 .footer .link:focus {
   color: var(--accent-cl);
+}
+
+/**
+  |============================
+  | Studio header icons
+  |============================
+*/
+.studio-list {
+  display: flex;
+  align-items: center;
+}
+
+.studio-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.studio-link {
+  display: flex;
+  align-items: center;
+
+  color: #757575;
+}
+
+.studio-link:hover,
+.studio-link:focus {
+  color: #ff6c00;
+}
+
+.studio-icon {
+  margin-right: 5px;
+  fill: currentColor;
+}
+
+.pizza-icon {
+  --color1: #fed070;
+  --color2: #faf8d2;
+  --color3: #d79c8c;
+  --color4: #cd6e61;
+  --color5: #e22f37;
+  --color6: #a4e869;
+}
+
+/* Clients icons */
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-link:hover {
+  border-color: #ff6c00;
+}
+
+.clients-icon {
+  fill: #afb1b8;
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: #ff6c00;
 }
