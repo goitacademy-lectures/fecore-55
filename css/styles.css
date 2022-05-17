@@ -171,7 +171,12 @@ img {
   |============================
 */
 .header {
-  background-color: #191c26;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  background-color: rgba(24, 27, 37, 0.4);
+  z-index: 10;
 }
 
 .header-container {
@@ -197,12 +202,25 @@ img {
 }
 
 .navigation-link {
+  position: relative;
   color: var(--secondary-txt-cl);
 }
 
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--accent-cl);
+}
+
+.navigation-link.current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6c00;
 }
 
 .header-gruop {
@@ -238,11 +256,66 @@ img {
 
 /**
   |============================
+  | modal form
+  |============================
+*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border: 1px solid #ff6c00;
+  border-radius: 50%;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+/**
+  |============================
   | Hero section
   |============================
 */
 .hero {
   background-color: #191c26;
+  height: 680px;
+}
+
+.hero .container {
+  position: relative;
 }
 
 .hero .list {
@@ -272,7 +345,34 @@ img {
 }
 
 .hero-group {
+  padding-top: 272px;
   width: 476px;
+}
+
+.hero .slider-pagination {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  flex-direction: column;
+  align-items: flex-end;
+  width: 18px;
+}
+
+.slider-item {
+  margin-bottom: 12px;
+  width: 8px;
+  height: 2px;
+  background-color: #9da4bd;
+}
+
+.slider-item:last-child {
+  margin-bottom: 0;
+}
+
+.slider-item.active {
+  width: 100%;
+  background-color: #fff;
 }
 
 .hero .uppertitle {
@@ -676,6 +776,8 @@ img {
 }
 
 .gallery .item {
+  position: relative;
+  overflow: hidden;
   /* margin-right: 30px; */
   margin: 15px;
   flex-basis: calc((100% - 120px) / 4);
@@ -683,6 +785,24 @@ img {
 /* .gallery .item:last-child {
   margin-right: 0;
 } */
+
+.gallery .item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg) translate(-80px, -10px);
+
+  content: attr(data-sale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+
+  background-color: rgb(0, 0, 0, 0.5);
+  border: 1px solid #ff6c00;
+}
 
 /**
   |============================
@@ -812,5 +932,76 @@ img {
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
+  fill: #ff6c00;
+}
+
+/**
+  |============================
+  | fixed element
+  |============================
+*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+
+  background-color: rgba(255, 108, 0, 1);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrow-top {
+  fill: #fff;
+}
+
+/**
+  |============================
+  | chat-menu
+  |============================
+*/
+
+.chat-menu {
+  position: fixed;
+  right: 30px;
+  bottom: 90px;
+}
+
+.chat-menu-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  background-image: url(https://gist.githubusercontent.com/yazdipour/91dea3fdf97dba702ed89a6a1b9a98a7/raw/8c4870d4fda64c6f8dbf9d12d579d1ad66c3f360/rainbowcat.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  z-index: 10;
+}
+
+.chat-menu-list {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chat-menu-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chat-menu-btn:hover ~ .chat-menu-list .chat-menu-item {
+  transform: translateY(calc(var(--item) * -30px)) translateX(-50%);
+}
+
+.chat-menu-icon {
   fill: #ff6c00;
 }

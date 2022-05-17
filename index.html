@@ -37,7 +37,7 @@
         <nav class="navigation">
           <ul class="navigation-list list">
             <li class="navigation-item">
-              <a class="link navigation-link" href="#about">О нас</a>
+              <a class="link navigation-link current" href="#about">О нас</a>
             </li>
             <li class="navigation-item">
               <a class="link navigation-link" href="#price">Услуги и цены</a>
@@ -51,28 +51,25 @@
           </ul>
         </nav>
 
-        <!-- <ul class="studio-list list">
-          <li class="studio-item">
-            <a class="studio-link link" href="">
-              <svg class="studio-icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="studio-item">
-            <a class="studio-link link" href="">
-              <svg class="studio-icon link" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul> -->
-
         <div class="header-gruop">
           <a class="link header-phone" href="tel:380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
+          <button class="btn btn-mode-dark" type="button" data-modal-open>онлайн-запись</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal-wrapper">
+              <button class="modal-btn" data-modal-close>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -109,6 +106,11 @@
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
             </p>
           </div>
+          <ul class="slider-pagination list">
+            <li class="slider-item active"></li>
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+          </ul>
           <ul class="list">
             <li class="item">
               <button class="slider-btn slider-btn-disable" type="button">Назад</button>
@@ -445,7 +447,7 @@
           <p class="uppertitle">На латинском языке “барба” означает “борода”</p>
           <h2 class="section-title visually-hidden">Галерея работ</h2>
           <ul class="list">
-            <li class="item">
+            <li class="item" data-sale="Скидка 50%">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-1.jpg"
@@ -454,7 +456,7 @@
                 height="360"
               />
             </li>
-            <li class="item">
+            <li class="item" data-sale="Скидка 20%">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-2.jpg"
@@ -463,7 +465,7 @@
                 height="360"
               />
             </li>
-            <li class="item">
+            <li class="item" data-sale="Скидка 30%">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-3.jpg"
@@ -472,7 +474,7 @@
                 height="360"
               />
             </li>
-            <li class="item">
+            <li class="item" data-sale="Скидка 10%">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-4.jpg"
@@ -485,21 +487,7 @@
         </div>
       </section>
       <!-- Секція Контакти -->
-      <section class="contacts section" id="contacts">
-        <!-- <svg class="pizza-icon" width="200" height="200">
-          <use href="./images/sprite.svg#pizza"></use>
-        </svg>
-
-        <ul class="clients list">
-          <li class="clients-item">
-            <a class="clients-link" href="">
-              <svg class="clients-icon" width="106" height="60">
-                <use href="./images/sprite.svg#logo-1"></use>
-              </svg>
-            </a>
-          </li>
-        </ul> -->
-      </section>
+      <section class="contacts section" id="contacts"></section>
     </main>
 
     <!-- Підвал сайту -->
@@ -524,5 +512,40 @@
         </ul>
       </div>
     </footer>
+
+    <div class="chat-menu">
+      <button class="chat-menu-btn"></button>
+      <ul class="chat-menu-list list">
+        <li class="chat-menu-item" style="--item: 1">
+          <a href="">
+            <svg class="chat-menu-icon" width="20" height="20">
+              <use href="./images/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="chat-menu-item" style="--item: 2">
+          <a href="">
+            <svg class="chat-menu-icon" width="20" height="20">
+              <use href="./images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="chat-menu-item" style="--item: 3">
+          <a href="">
+            <svg class="chat-menu-icon" width="20" height="20">
+              <use href="./images/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <button class="scroll-to-top" type="button">
+      <svg class="arrow-top" width="20" height="20">
+        <use href="./images/sprite.svg#arrow-top"></use>
+      </svg>
+    </button>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
