@@ -22,12 +22,15 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Шапка сайту -->
-    <header class="header">
+    <header class="header" id="header">
       <div class="container header-container">
         <a class="logo" href="./index.html" aria-label="Логотип сайта BarberShop">
           <img src="./images/icons/logo.svg" alt="Логитип" width="69" height="56" />
@@ -53,7 +56,9 @@
 
         <div class="header-gruop">
           <a class="link header-phone" href="tel:380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-mode-dark" type="button" data-modal-open>онлайн-запись</button>
+          <button class="btn btn-mode-dark header-btn" type="button" data-modal-open>
+            онлайн-запись
+          </button>
           <div class="backdrop is-hidden" data-modal>
             <div class="modal-wrapper">
               <button class="modal-btn" data-modal-close>
@@ -79,30 +84,32 @@
       <!-- Секція Герой -->
       <section class="hero">
         <div class="container">
-          <ul class="list">
-            <li class="item">
-              <a
-                class="link"
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Instagram</a
-              >
-            </li>
-            <li class="item">
-              <a
-                class="link"
-                href="htts://www.youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-left-side">
+            <ul class="social-links-list hero-list list">
+              <li class="social-links-item">
+                <a
+                  class="social-links-item-link link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social-links-item">
+                <a
+                  class="social-links-item-link link"
+                  href="htts://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="hero-group">
-            <p class="uppertitle" lang="en">A hair salon for men in Kyiv</p>
+            <p class="uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
             <h1 class="main-title" lang="en">BarberShop</h1>
-            <p class="subtitle">
+            <p class="subtitle subtitle-title-mode-dark">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
             </p>
           </div>
@@ -111,11 +118,11 @@
             <li class="slider-item"></li>
             <li class="slider-item"></li>
           </ul>
-          <ul class="list">
-            <li class="item">
+          <ul class="slider-controls list">
+            <li class="slider-item-controls">
               <button class="slider-btn slider-btn-disable" type="button">Назад</button>
             </li>
-            <li class="item">
+            <li class="slider-item-controls">
               <button class="slider-btn" type="button">Вперед</button>
             </li>
           </ul>
@@ -144,10 +151,10 @@
               />
             </li>
           </ul>
-          <div class="about-group">
-            <p class="uppertitle">О НАС</p>
-            <h2 class="section-title">Лучший Барбершоп твоего города</h2>
-            <p class="subtitle">
+          <div class="about-group" data-aos="fade-left">
+            <p class="uppertitle uppertitle-mode-light">О НАС</p>
+            <h2 class="section-title section-title-mode-light">Лучший Барбершоп твоего города</h2>
+            <p class="subtitle subtitle-title-mode-light about-subtitle">
               Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
             </p>
             <p class="description">
@@ -163,8 +170,8 @@
       <!-- Секція Послуги та ціни -->
       <section class="price section" id="price">
         <div class="container">
-          <p class="uppertitle">Проведи время в компании лучших мастеров</p>
-          <h2 class="section-title">Услуги и цены</h2>
+          <p class="uppertitle uppertitle-mode-dark">Проведи время в компании лучших мастеров</p>
+          <h2 class="section-title section-title-mode-dark">Услуги и цены</h2>
           <ul class="price-list list">
             <li class="price-item">
               <ul class="price-inner-list list">
@@ -222,9 +229,9 @@
             </li>
           </ul>
           <div class="benefits-group">
-            <p class="uppertitle">старая традиционная школа</p>
-            <h2 class="section-title">Почему приходят именно к нам?</h2>
-            <p class="subtitle">
+            <p class="uppertitle uppertitle-mode-light">старая традиционная школа</p>
+            <h2 class="section-title section-title-mode-light">Почему приходят именно к нам?</h2>
+            <p class="subtitle subtitle-title-mode-light">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз
               прочитать.
             </p>
@@ -234,10 +241,10 @@
       <!-- Секція Майстри -->
       <section class="team section" id="team">
         <div class="container">
-          <p class="uppertitle">для настоящих ценителей атмосферы</p>
-          <h2 class="section-title">Наши мастера</h2>
+          <p class="uppertitle uppertitle-mode-light">для настоящих ценителей атмосферы</p>
+          <h2 class="section-title section-title-mode-light">Наши мастера</h2>
           <ul class="member-list list grid">
-            <li class="member-item grid-item">
+            <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="300">
               <img
                 class="member-img"
                 src="./images/team/member-1.jpg"
@@ -304,7 +311,7 @@
                 </ul>
               </div>
             </li>
-            <li class="member-item grid-item">
+            <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="600">
               <img
                 class="member-img"
                 src="./images/team/member-2.jpg"
@@ -371,7 +378,7 @@
                 </ul>
               </div>
             </li>
-            <li class="member-item grid-item">
+            <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="900">
               <img
                 class="member-img"
                 src="./images/team/member-3.jpg"
@@ -444,7 +451,9 @@
       <!-- Секція Галерея -->
       <section class="gallery section">
         <div class="container">
-          <p class="uppertitle">На латинском языке “барба” означает “борода”</p>
+          <p class="uppertitle uppertitle-mode-light gallery-uppertitle">
+            На латинском языке “барба” означает “борода”
+          </p>
           <h2 class="section-title visually-hidden">Галерея работ</h2>
           <ul class="list">
             <li class="item" data-sale="Скидка 50%">
@@ -494,18 +503,22 @@
     <footer class="footer">
       <div class="container">
         <p class="copyright">&#169; Copyright 2020</p>
-        <ul class="list">
-          <li class="item">
+        <ul class="social-links-list list">
+          <li class="social-links-item">
             <a
-              class="link"
+              class="social-links-item-link link"
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
               >Instagram</a
             >
           </li>
-          <li class="item">
-            <a class="link" href="htts://www.youtube.com" target="_blank" rel="noopener noreferrer"
+          <li class="social-links-item">
+            <a
+              class="social-links-item-link link"
+              href="htts://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
               >Youtube</a
             >
           </li>
@@ -513,7 +526,7 @@
       </div>
     </footer>
 
-    <div class="chat-menu">
+    <!-- <div class="chat-menu">
       <button class="chat-menu-btn"></button>
       <ul class="chat-menu-list list">
         <li class="chat-menu-item" style="--item: 1">
@@ -538,7 +551,7 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <button class="scroll-to-top" type="button">
       <svg class="arrow-top" width="20" height="20">
@@ -547,5 +560,9 @@
     </button>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/header-scroll.js"></script>
+    <!-- AOS aniamtion library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>
