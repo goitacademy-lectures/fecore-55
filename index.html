@@ -1,128 +1,568 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 01</title>
+    <title>Module 04 theory</title>
+    <!-- Project fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-    <style>
-      .list {
-        display: flex;
-      }
-      .picture-1 {
-        border: 2px solid tomato;
-      }
-      .picture-2 {
-        border: 2px dashed hotpink;
-      }
-    </style>
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Шапка сайту -->
-    <header>
-      <!-- Головна навігація сторінки -->
-      <nav>
-        <ul>
-          <li>
-            <a href="">Link 1</a>
-          </li>
-          <li>
-            <a href="">Link 2</a>
-          </li>
-          <li>
-            <a href="">Link 3</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="header" id="header">
+      <div class="container header-container">
+        <a class="logo" href="./index.html" aria-label="Логотип сайта BarberShop">
+          <img src="./images/icons/logo.svg" alt="Логитип" width="69" height="56" />
+        </a>
+
+        <!-- Якорні посилання -->
+        <nav class="navigation">
+          <ul class="navigation-list list">
+            <li class="navigation-item">
+              <a class="link navigation-link current" href="#about">О нас</a>
+            </li>
+            <li class="navigation-item">
+              <a class="link navigation-link" href="#price">Услуги и цены</a>
+            </li>
+            <li class="navigation-item">
+              <a class="link navigation-link" href="#team">Мастера</a>
+            </li>
+            <li class="navigation-item">
+              <a class="link navigation-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-gruop">
+          <a class="link header-phone" href="tel:380441111111">+38 044 111 11 11</a>
+          <button class="btn btn-mode-dark header-btn" type="button" data-modal-open>
+            онлайн-запись
+          </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal-wrapper">
+              <button class="modal-btn" data-modal-close>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <!-- Основний унікальний розділ -->
+    <!-- Унікальний контент сайту -->
     <main>
-      <!-- Основний будівельний блок для розділів сторінки -->
-      <section>
-        <!-- Групування медіа-контенту за допомогою div -->
-        <div>
-          <ul class="list">
-            <li>
-              <!-- відносний шлях до файлу зображення -->
-              <img
-                class="picture-1"
-                src="./images/section-1/img-1.jpg"
-                alt="Послуга гоління бороди"
-                width="270"
-              />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+      <!-- Секція Герой -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-left-side">
+            <ul class="social-links-list hero-list list">
+              <li class="social-links-item">
+                <a
+                  class="social-links-item-link link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="social-links-item">
+                <a
+                  class="social-links-item-link link"
+                  href="htts://www.youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="hero-group">
+            <p class="uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
+            <h1 class="main-title" lang="en">BarberShop</h1>
+            <p class="subtitle subtitle-title-mode-dark">
+              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
+            </p>
+          </div>
+          <ul class="slider-pagination list">
+            <li class="slider-item active"></li>
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+          </ul>
+          <ul class="slider-controls list">
+            <li class="slider-item-controls">
+              <button class="slider-btn slider-btn-disable" type="button">Назад</button>
             </li>
-            <li>
-              <!-- абсолютний шлях до файлу зображення -->
+            <li class="slider-item-controls">
+              <button class="slider-btn" type="button">Вперед</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Секція Про нас -->
+      <section class="about section" id="about">
+        <div class="container about-container">
+          <ul class="list">
+            <li class="item">
               <img
-                class="picture-2"
-                src="https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJhbHxlbnwwfHwwfHw%3D&w=1000&q=80"
-                alt="Послуга гоління небезпечним лезом"
+                class="about-img"
+                src="./images/about/img-1.jpg"
+                alt="Бритье бороды"
                 width="270"
                 height="445"
               />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            </li>
+            <li class="item">
+              <img
+                class="about-img"
+                src="./images/about/img-2.jpg"
+                alt="Бритье опасной бритвой"
+                width="270"
+                height="445"
+              />
+            </li>
+          </ul>
+          <div class="about-group" data-aos="fade-left">
+            <p class="uppertitle uppertitle-mode-light">О НАС</p>
+            <h2 class="section-title section-title-mode-light">Лучший Барбершоп твоего города</h2>
+            <p class="subtitle subtitle-title-mode-light about-subtitle">
+              Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
+            </p>
+            <p class="description">
+              Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И
+              когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы
+              команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы
+              усовершенствовать каждого, кто к нам приходит!
+            </p>
+            <button class="btn btn-mode-light" type="button">онлайн-запись</button>
+          </div>
+        </div>
+      </section>
+      <!-- Секція Послуги та ціни -->
+      <section class="price section" id="price">
+        <div class="container">
+          <p class="uppertitle uppertitle-mode-dark">Проведи время в компании лучших мастеров</p>
+          <h2 class="section-title section-title-mode-dark">Услуги и цены</h2>
+          <ul class="price-list list">
+            <li class="price-item">
+              <ul class="price-inner-list list">
+                <li class="price-inner-item">
+                  <span>Мужская стрижка</span> <span>от 300 грн.</span>
+                </li>
+                <li class="price-inner-item">
+                  <span>Стрижка бороды</span> <span>от 200 грн.</span>
+                </li>
+                <li class="price-inner-item"><span>Стрижка усов</span> <span>от 200 грн.</span></li>
+                <li class="price-inner-item">
+                  <span>Бритье опасной бритвой</span> <span>от 200 грн.</span>
+                </li>
+              </ul>
+            </li>
+            <li class="price-item">
+              <ul class="price-inner-list list">
+                <li class="price-inner-item">
+                  <span>Cтрижка у стажера</span> <span>от 50 грн.</span>
+                </li>
+                <li class="price-inner-item">
+                  <span>Стрижка под насадку</span> <span>от 200 грн.</span>
+                </li>
+                <li class="price-inner-item">
+                  <span>Детская стрижка (до 12 лет)</span> <span>от 300 грн.</span>
+                </li>
+                <li class="price-inner-item">
+                  <span>Камуфлирование седины</span> <span>от 200 грн.</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button class="btn btn-mode-dark" type="button">онлайн-запись</button>
+        </div>
+      </section>
+      <!-- Секція Переваги -->
+      <section class="benefits section">
+        <div class="container">
+          <ul class="list">
+            <li class="item">
+              <p class="benefits-amount">600 <sup class="benefits-amount-decor">+</sup></p>
+              <p class="benefits-text">Довольных клиентов в день</p>
+            </li>
+            <li class="item">
+              <p class="benefits-amount">20 <sup class="benefits-amount-decor">+</sup></p>
+              <p class="benefits-text">Лучших мастеров Киева</p>
+            </li>
+            <li class="item">
+              <p class="benefits-amount">50 <sup class="benefits-amount-decor">+</sup></p>
+              <p class="benefits-text">Наград за отличный сервис</p>
+            </li>
+            <li class="item">
+              <p class="benefits-amount">100<sup class="benefits-amount-decor">+</sup></p>
+              <p class="benefits-text">Подарков постоянным клиентам</p>
+            </li>
+          </ul>
+          <div class="benefits-group">
+            <p class="uppertitle uppertitle-mode-light">старая традиционная школа</p>
+            <h2 class="section-title section-title-mode-light">Почему приходят именно к нам?</h2>
+            <p class="subtitle subtitle-title-mode-light">
+              О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз
+              прочитать.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Секція Майстри -->
+      <section class="team section" id="team">
+        <div class="container">
+          <p class="uppertitle uppertitle-mode-light">для настоящих ценителей атмосферы</p>
+          <h2 class="section-title section-title-mode-light">Наши мастера</h2>
+          <ul class="member-list list grid">
+            <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="300">
+              <img
+                class="member-img"
+                src="./images/team/member-1.jpg"
+                alt="John Smith"
+                width="370"
+                height="346"
+              />
+              <div class="member-group">
+                <h3 class="member-title" lang="en">John Smith</h3>
+                <p class="member-position" lang="en">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Twitter"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Facebook"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Linkedin"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="600">
+              <img
+                class="member-img"
+                src="./images/team/member-2.jpg"
+                alt=""
+                width="370"
+                height="346"
+              />
+              <div class="member-group">
+                <h3 class="member-title" lang="en">Michele Doe</h3>
+                <p class="member-position" lang="en">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Twitter"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Facebook"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Linkedin"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="member-item grid-item" data-aos="zoom-in-up" data-aos-delay="900">
+              <img
+                class="member-img"
+                src="./images/team/member-3.jpg"
+                alt=""
+                width="370"
+                height="346"
+              />
+              <div class="member-group">
+                <h3 class="member-title" lang="en">Alan Black</h3>
+                <p class="member-position" lang="en">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Twitter"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Facebook"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="иконка Linkedin"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
-
-        <!-- Групування текстового контенту за допомогою div -->
-        <div>
-          <h2>Lorem ipsum dolor sit.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
-            delectus atque debitis necessitatibus quia, numquam possimus? Quo
-            aperiam laboriosam obcaecati error sapiente quaerat saepe at
-            expedita. Atque amet modi sit.
+      </section>
+      <!-- Секція Галерея -->
+      <section class="gallery section">
+        <div class="container">
+          <p class="uppertitle uppertitle-mode-light gallery-uppertitle">
+            На латинском языке “барба” означает “борода”
           </p>
-          <p>
-            Lorem ipsum dolor <span>sit amet consectetur</span> adipisicing
-            elit. Alias placeat beatae molestiae voluptate veritatis vitae aut
-            cupiditate neque quas tempore mollitia asperiores, repellendus optio
-            ipsam, sequi aliquid. Aut, vero repellendus?
-          </p>
-
-          <ol>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-          </ol>
-
-          <ul>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
+          <h2 class="section-title visually-hidden">Галерея работ</h2>
+          <ul class="list">
+            <li class="item" data-sale="Скидка 50%">
+              <img
+                class="gallery-img"
+                src="./images/gallery/gallery-img-1.jpg"
+                alt=""
+                width="270"
+                height="360"
+              />
+            </li>
+            <li class="item" data-sale="Скидка 20%">
+              <img
+                class="gallery-img"
+                src="./images/gallery/gallery-img-2.jpg"
+                alt=""
+                width="270"
+                height="360"
+              />
+            </li>
+            <li class="item" data-sale="Скидка 30%">
+              <img
+                class="gallery-img"
+                src="./images/gallery/gallery-img-3.jpg"
+                alt=""
+                width="270"
+                height="360"
+              />
+            </li>
+            <li class="item" data-sale="Скидка 10%">
+              <img
+                class="gallery-img"
+                src="./images/gallery/gallery-img-4.jpg"
+                alt=""
+                width="270"
+                height="360"
+              />
+            </li>
           </ul>
-
-          <button type="button">Click me!</button>
         </div>
       </section>
+      <!-- Секція Контакти -->
+      <section class="contacts section" id="contacts"></section>
     </main>
 
-    <!-- Футер сайту -->
-    <footer>
-      <!-- Блок місцезнаходження і контактів компанії -->
-      <address>
-        <ul>
-          <li><a href="" target="_blank" rel="noopener noreferrer">We are from Ukraine!)</a></li>
-          <li>
-            <a href="tel:380991112233" target="_blank" rel="noopener noreferrer"
-              >+38(099) 111-22-33</a
-            >
-          </li>
-          <li>
+    <!-- Підвал сайту -->
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">&#169; Copyright 2020</p>
+        <ul class="social-links-list list">
+          <li class="social-links-item">
             <a
-              href="mailto:company@mail.com"
+              class="social-links-item-link link"
+              href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
-              >company@mail.com</a
+              >Instagram</a
+            >
+          </li>
+          <li class="social-links-item">
+            <a
+              class="social-links-item-link link"
+              href="htts://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Youtube</a
             >
           </li>
         </ul>
-      </address>
+      </div>
     </footer>
+
+    <!-- <div class="chat-menu">
+      <button class="chat-menu-btn"></button>
+      <ul class="chat-menu-list list">
+        <li class="chat-menu-item" style="--item: 1">
+          <a href="">
+            <svg class="chat-menu-icon" width="20" height="20">
+              <use href="./images/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="chat-menu-item" style="--item: 2">
+          <a href="">
+            <svg class="chat-menu-icon" width="20" height="20">
+              <use href="./images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="chat-menu-item" style="--item: 3">
+          <a href="">
+            <svg class="chat-menu-icon" width="20" height="20">
+              <use href="./images/sprite.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div> -->
+
+    <button class="scroll-to-top" type="button">
+      <svg class="arrow-top" width="20" height="20">
+        <use href="./images/sprite.svg#arrow-top"></use>
+      </svg>
+    </button>
+
+    <script src="./js/modal.js"></script>
+    <script src="./js/header-scroll.js"></script>
+    <!-- AOS aniamtion library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/animations.js"></script>
   </body>
 </html>
