@@ -67,6 +67,10 @@ img {
   margin: -1px;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   /* outline: 1px solid red; */
 
