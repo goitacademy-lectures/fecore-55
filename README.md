@@ -3,12 +3,12 @@
 Заняття 11:
 
 - Тег form
-- Тег input
-- Атрибут type тега input і його значення
-- Атрибути placeholder, checked, name
 - Тег label
-- Теги checkbox та radio
+- Тег input
+- Атрибут type тега input і його значення (email, password, radio, checkbox, number, tel, range,
+  date)
+- Атрибути placeholder, checked, name
 - Тег textarea
 - Теги select та optgroup
-- Тег fieldset и <div role="group">
 - Тег datalist
+- Тег fieldset и <div role="group">

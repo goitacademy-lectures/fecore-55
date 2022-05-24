@@ -1181,3 +1181,17 @@ img {
 .chat-menu-icon {
   fill: #ff6c00;
 }
+
+
+/**
+  |============================
+  | form
+  |============================
+*/
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+}
