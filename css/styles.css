@@ -152,6 +152,7 @@ img {
 .subtitle-title-mode-light {
   color: #555555;
 }
+
 .subtitle-title-mode-dark {
   color: #9da4bd;
 }
@@ -182,6 +183,7 @@ img {
 .grid-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
+
 /**
   |============================
   | Загальні стилі для кнопок
@@ -278,6 +280,7 @@ img {
 .slider-item-controls {
   margin-right: 26px;
 }
+
 .slider-item-controls:last-child {
   margin-right: 0;
 }
@@ -393,7 +396,7 @@ img {
 
 .navigation-link.current::after {
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
 
   content: '';
@@ -444,15 +447,19 @@ img {
   0% {
     transform: rotate(6deg);
   }
+
   4% {
     transform: rotate(-6deg);
   }
+
   8% {
     transform: rotate(3deg);
   }
+
   12% {
     transform: rotate(-3deg);
   }
+
   16% {
     transform: rotate(0);
   }
@@ -474,6 +481,7 @@ img {
 
   transition: opacity var(--fast-anim), visibility var(--fast-anim);
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -710,6 +718,7 @@ img {
   transform-origin: left;
   transform: rotateX(7deg) rotateY(25deg);
 }
+
 .price-item:first-child:hover {
   transform: rotateX(0deg) rotateY(5deg);
 }
@@ -719,9 +728,11 @@ img {
   transform-origin: right;
   transform: rotateX(7deg) rotateY(-25deg);
 }
+
 .price-item:last-child:hover {
   transform: rotateX(7deg) rotateY(-5deg);
 }
+
 .price-inner-list {
   padding: 30px 40px;
   font-size: 18px;
@@ -774,6 +785,7 @@ img {
 
   color: #303030;
 }
+
 .benefits-amount-decor {
   font-weight: 600;
   font-size: 16px;
@@ -782,6 +794,7 @@ img {
 
   color: #ff6c00;
 }
+
 .benefits-text {
   font-weight: 600;
   font-size: 11px;
@@ -790,6 +803,7 @@ img {
 
   color: #303030;
 }
+
 .benefits .uppertitle {
   font-weight: 600;
   font-size: 11px;
@@ -825,6 +839,7 @@ img {
 .team {
   background-color: #f7f7f7;
 }
+
 .team .uppertitle {
   font-weight: 600;
   font-size: 11px;
@@ -862,6 +877,7 @@ img {
 
   color: #303030;
 }
+
 .member-position {
   margin-bottom: 30px;
 
@@ -941,6 +957,7 @@ img {
   margin: 15px;
   flex-basis: calc((100% - 120px) / 4);
 }
+
 /* .gallery .item:last-child {
   margin-right: 0;
 } */
@@ -1157,10 +1174,24 @@ img {
   transform: translateX(-50%);
 }
 
-.chat-menu-btn:hover ~ .chat-menu-list .chat-menu-item {
+.chat-menu-btn:hover~.chat-menu-list .chat-menu-item {
   transform: translateY(calc(var(--item) * -30px)) translateX(-50%);
 }
 
 .chat-menu-icon {
   fill: #ff6c00;
+}
+
+
+/**
+  |============================
+  | form
+  |============================
+*/
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
 }
