@@ -65,14 +65,136 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 320 512"
-                  width="20"
-                  height="20"
+                  width="18"
+                  height="18"
                 >
                   <path
                     d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
                   />
                 </svg>
               </button>
+
+              <strong class="form-title">Оставьте заявку на стрижку</strong>
+              <form class="modal-form">
+                <!-- дані відвідувача -->
+                <label class="form-modal-group">
+                  <span class="form-modal-label">Имя</span>
+                  <input
+                    class="form-modal-input"
+                    type="text"
+                    name="user-name"
+                    minlength="3"
+                    placeholder=" "
+                    required
+                  />
+                  <span class="warning"> Имя должно состоять минимум из 3 символов </span>
+                  <svg class="warning-icon" width="18" height="18">
+                    <use href="./images/form-sprite.svg#icon-warning"></use>
+                  </svg>
+                  <span class="error"> Вы ввели не корректные данные </span>
+                  <svg class="error-icon" width="18" height="18">
+                    <use href="./images/form-sprite.svg#icon-error"></use>
+                  </svg>
+                  <svg class="form-modal-icon" width="20" height="20">
+                    <use href="./images/form-sprite.svg#icon-user"></use>
+                  </svg>
+                </label>
+
+                <label class="form-modal-group">
+                  <span class="form-modal-label">Телефон</span>
+                  <input
+                    class="form-modal-input"
+                    type="phone"
+                    name="user-phone"
+                    placeholder=" "
+                    required
+                  />
+                  <span class="warning"> Введите номер телефона в формате +38 099 123 45 67 </span>
+                  <svg class="warning-icon" width="15" height="15">
+                    <use href="./images/form-sprite.svg#icon-warning"></use>
+                  </svg>
+                  <span class="error"> Вы ввели не корректные данные </span>
+                  <svg class="error-icon" width="15" height="15">
+                    <use href="./images/form-sprite.svg#icon-error"></use>
+                  </svg>
+                  <svg class="form-modal-icon" width="20" height="20">
+                    <use href="./images/form-sprite.svg#icon-phone"></use>
+                  </svg>
+                </label>
+
+                <label class="form-modal-group">
+                  <span class="form-modal-label">Почта</span>
+                  <input
+                    class="form-modal-input"
+                    type="mail"
+                    name="user-mail"
+                    placeholder=" "
+                    required
+                  />
+                  <span class="warning"> Введите почту в формате example@mail.com </span>
+                  <svg class="warning-icon" width="15" height="15">
+                    <use href="./images/form-sprite.svg#icon-warning"></use>
+                  </svg>
+                  <span class="error"> Вы ввели не корректные данные </span>
+                  <svg class="error-icon" width="15" height="15">
+                    <use href="./images/form-sprite.svg#icon-error"></use>
+                  </svg>
+                  <svg class="form-modal-icon" width="20" height="20">
+                    <use href="./images/form-sprite.svg#icon-mail"></use>
+                  </svg>
+                </label>
+
+                <!-- варіанти оплати -->
+                <p>Виберите форму оплаты</p>
+                <div class="form-pay-type">
+                  <label class="form-pay-group">
+                    <input
+                      class="form-pay-checkbox visually-hidden"
+                      type="radio"
+                      name="user-pay"
+                      checked
+                    />
+                    <svg class="form-pay-option" width="50" height="50">
+                      <use href="./images/form-sprite.svg#icom-ms-card"></use>
+                    </svg>
+                  </label>
+
+                  <label class="form-pay-group">
+                    <input class="form-pay-checkbox visually-hidden" type="radio" name="user-pay" />
+                    <svg class="form-pay-option" width="50" height="50">
+                      <use href="./images/form-sprite.svg#icon-visa"></use>
+                    </svg>
+                  </label>
+                </div>
+
+                <!-- політика приватності (чекбокс) -->
+                <label class="form-policy-group">
+                  <input
+                    class="checkbox visually-hidden"
+                    type="checkbox"
+                    tabindex="-1"
+                    id="chk1-label"
+                  />
+                  <span
+                    class="custom-checkbox"
+                    tabindex="0"
+                    role="checkbox"
+                    aria-checked="false"
+                    aria-labelledby="chk1-label"
+                  >
+                    <svg class="custom-checkbox-icon" width="18" height="18">
+                      <use href="./images/form-sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="form-policy-desc"
+                    >Соглашаюсь с
+                    <a class="form-policy-link" href="">Политикой использования</a>
+                    данных</span
+                  >
+                </label>
+
+                <button class="btn btn-mode-light submit-btn" type="submit">Отправить</button>
+              </form>
             </div>
           </div>
         </div>
@@ -209,21 +331,21 @@
       </section>
       <!-- Секція Переваги -->
       <section class="benefits section">
-        <div class="container">
-          <ul class="list">
-            <li class="item">
+        <div class="container benefits-container">
+          <ul class="benefits-stat list">
+            <li class="benefits-stat-item">
               <p class="benefits-amount">600 <sup class="benefits-amount-decor">+</sup></p>
               <p class="benefits-text">Довольных клиентов в день</p>
             </li>
-            <li class="item">
+            <li class="benefits-stat-item">
               <p class="benefits-amount">20 <sup class="benefits-amount-decor">+</sup></p>
               <p class="benefits-text">Лучших мастеров Киева</p>
             </li>
-            <li class="item">
+            <li class="benefits-stat-item">
               <p class="benefits-amount">50 <sup class="benefits-amount-decor">+</sup></p>
               <p class="benefits-text">Наград за отличный сервис</p>
             </li>
-            <li class="item">
+            <li class="benefits-stat-item">
               <p class="benefits-amount">100<sup class="benefits-amount-decor">+</sup></p>
               <p class="benefits-text">Подарков постоянным клиентам</p>
             </li>
@@ -500,115 +622,42 @@
         <div class="container">
           <!-- Контактна форма -->
           <div class="contacts-left-side">
-            <h2>Онлайн-запись</h2>
+            <h2 class="section-title">Онлайн-запись</h2>
             <form class="contact-form" name="contact-form" action="./js/method.js" method="post">
-              <label class="form-group">
-                <span class="form-label">Имя*</span>
-                <input
-                  class="form-input"
-                  type="text"
-                  id="user-name"
-                  name="user-name"
-                  placeholder="Сергій"
-                />
-              </label>
+              <div class="form-wrapper">
+                <label class="form-group">
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="Сергій"
+                  />
+                  <span class="form-label">Имя*</span>
+                </label>
 
-              <label class="form-group">
-                <span class="form-label">Телефон*</span>
-                <input
-                  class="form-input"
-                  type="text"
-                  id="user-phone"
-                  name="user-phone"
-                  placeholder="+38 099 123 45 67"
-                />
-              </label>
+                <label class="form-group">
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="user-phone"
+                    name="user-phone"
+                    placeholder="+38 099 123 45 67"
+                  />
+                  <span class="form-label">Телефон*</span>
+                </label>
+              </div>
 
-              <!-- <label for="user-mail">Email</label>
-              <input type="email" name="user-mail" id="user-mail" />
-              <label for="user-password">Password</label>
-              <input type="password" name="user-password" id="user-password" />
-
-              <label for="user-phone">Phone</label>
-              <input type="tel" name="user-phone" id="user-phone" />
-
-              <input type="checkbox" name="" id="" checked />
-
-              <label>
-                <input type="radio" name="radio-group" id="" />
-                <input type="radio" name="radio-group" id="" />
-                <input type="radio" name="radio-group" id="" />
-                <input type="radio" name="radio-group" id="" />
-              </label>
-
-              <input type="number" name="" id="" min="0" max="10" value="1" />
-              <input type="range" name="" id="" min="0" max="10" value="0" step="2" />
-              <input type="time" name="" id="" />
-              <input type="date" name="" id="" />
-              <input type="datetime-local" name="" id="" /> -->
-
-              <!--
-                Краще використовувати кнопки з відповідними значеннями
-                для підвищення семантики
-                <input type="submit" value="click me" />
-                <input type="reset" value="reset" /> -->
-
-              <label class="form-group">
-                <span class="form-label">сообщение</span>
+              <label class="form-message-group">
                 <textarea
                   class="form-message"
                   name="user-message"
                   rows="5"
                   placeholder="Ваш коментарий..."
                 ></textarea>
+                <span class="form-label">сообщение</span>
               </label>
-              <!--
-              <label for="product-colors">Colors</label>
-              <select name="product-colors" id="product-colors">
-                <option value="black">black</option>
-                <option value="red">red</option>
-                <option value="green" selected>green</option>
-                <option value="blue">blue</option>
-              </select> -->
-
-              <!-- <label for="form-mounth">Виберіть місяць у кварталі</label>
-              <select name="form-mounth" id="form-mounth">
-                <optgroup label="I квартал">
-                  <option value="1-mounth_01">Грудень</option>
-                  <option value="1-mounth_02">Січень</option>
-                  <option value="1-mounth_03">Лютий</option>
-                </optgroup>
-                <optgroup label="II квартал">
-                  <option value="1-mounth_03">Березень</option>
-                  <option value="1-mounth_03">Квітень</option>
-                  <option value="1-mounth_03">Травень</option>
-                </optgroup>
-                <optgroup label="III квартал">
-                  <option value="1-mounth_03">Червень</option>
-                  <option value="1-mounth_03">Липень</option>
-                  <option value="1-mounth_03">Серпень</option>
-                </optgroup>
-                <optgroup label="IV квартал">
-                  <option value="1-mounth_03">Вересень</option>
-                  <option value="1-mounth_03">Жовтень</option>
-                  <option value="1-mounth_03">Листопад</option>
-                </optgroup>
-              </select> -->
-
-              <!-- <label for="user-model">Вкажіть марку авто</label>
-              <input type="text" list="auto-model" name="user-model" id="user-model" />
-
-              <datalist id="auto-model">
-                <option>BMW</option>
-                <option>Audi</option>
-                <option>Peugeot</option>
-                <option>Pagani</option>
-                <option>Pontiac</option>
-                <option>Citroen</option>
-                <option>Opel</option>
-              </datalist> -->
-
-              <button type="submit">отправить</button>
+              <button class="btn btn-mode-dark" type="submit">отправить</button>
             </form>
           </div>
           <!-- Контакти барбершопу -->
