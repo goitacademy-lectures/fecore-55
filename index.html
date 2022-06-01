@@ -191,6 +191,8 @@
                     type="checkbox"
                     tabindex="-1"
                     id="chk1-label"
+                    data-modal-checkbox
+                    checked
                   />
                   <span
                     class="modal-form__custom-checkbox"
@@ -210,7 +212,12 @@
                   >
                 </label>
 
-                <button class="btn btn--mode-light modal-form__submit-btn" type="submit">
+                <button
+                  class="btn btn--mode-light modal-form__submit-btn"
+                  type="submit"
+                  disabled="false"
+                  data-submit-btn
+                >
                   Отправить
                 </button>
               </form>
@@ -752,5 +759,6 @@
     <!-- AOS aniamtion library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/animations.js"></script>
+    <script src="./js/agreement.js"></script>
   </body>
 </html>
