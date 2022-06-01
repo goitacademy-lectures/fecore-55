@@ -6,8 +6,8 @@ function changeHeaderBackground() {
   const pageOffset = window.pageYOffset;
 
   if (pageOffset > headerOffsetTrigger) {
-    header.classList.add('no-transparency');
+    header.classList.add('js-no-transparency');
   } else {
-    header.classList.remove('no-transparency');
+    header.classList.remove('js-no-transparency');
   }
 }
