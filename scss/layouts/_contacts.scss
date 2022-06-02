@@ -1,0 +1,16 @@
+/**
+  |============================
+  | Contacts section
+  |============================
+*/
+.contacts {
+  max-width: 1280px;
+  height: 644px;
+  margin: 0 auto;
+
+  background-color: var(--dark-bg-cl);
+  background-image: url(../images/contacts/bg-contacts.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left calc(50% + 325px);
+}

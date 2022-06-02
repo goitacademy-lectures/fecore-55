@@ -1,0 +1,48 @@
+/**
+  |============================
+  | chat-menu
+  |============================
+*/
+
+.chat-menu {
+  position: fixed;
+  right: 30px;
+  bottom: 90px;
+}
+
+.chat-menu-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  background-image: url(https://gist.githubusercontent.com/yazdipour/91dea3fdf97dba702ed89a6a1b9a98a7/raw/8c4870d4fda64c6f8dbf9d12d579d1ad66c3f360/rainbowcat.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+  z-index: 10;
+}
+
+.chat-menu-list {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chat-menu-item {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chat-menu-btn:hover ~ .chat-menu-list .chat-menu-item {
+  transform: translateY(calc(var(--item) * -30px)) translateX(-50%);
+}
+
+.chat-menu-icon {
+  fill: #ff6c00;
+}

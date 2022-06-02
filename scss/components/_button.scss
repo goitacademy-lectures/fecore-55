@@ -1,0 +1,23 @@
+/**
+  |============================
+  | Загальні стилі для кнопок
+  |============================
+*/
+.btn {
+  // @extend %btn;
+  @include btn;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: var(--accent-cl);
+  }
+
+  &--mode-light {
+    color: #303030;
+  }
+
+  &--mode-dark {
+    color: #ffffff;
+  }
+}

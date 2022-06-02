@@ -1,0 +1,33 @@
+// utils
+@import './utils/vars';
+@import './utils/visually-hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+// base styles
+@import './base/common';
+@import './base/reset';
+@import './base/js-selectors';
+@import './base/animations';
+@import './base/container';
+@import './base/card-set';
+
+// components
+@import './components/button';
+@import './components/socials';
+@import './components/slider/module';
+@import './components/slide-top-btn';
+@import './components/chat-menu';
+@import './components/modal-form';
+@import './components/contacts-form';
+
+// layuots
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/about';
+@import './layouts/price';
+@import './layouts/benefits';
+@import './layouts/team';
+@import './layouts/gallery';
+@import './layouts/contacts';
+@import './layouts/footer';

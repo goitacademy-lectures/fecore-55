@@ -1,0 +1,83 @@
+/**
+  |============================
+  | Посилання на соц.мережі
+  |============================
+*/
+/* Social icons */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: #ffffff;
+  color: #303030;
+
+  border-radius: 50%;
+
+  transition: color var(--fast-anim);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: #ff6c00;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/* .socials-icon {
+  fill: #303030;
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: #ff6c00;
+} */
+.social-links-list {
+  &:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    margin-right: 40px;
+
+    background-color: #303030;
+  }
+}
+
+.social-links-item {
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-links-item-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #303030;
+  transition: color var(--fast-anim);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}

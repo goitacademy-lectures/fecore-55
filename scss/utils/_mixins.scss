@@ -1,0 +1,91 @@
+@mixin btn {
+  padding: 12px 20px;
+  max-width: 200px;
+  min-width: 160px;
+  min-height: 40px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  border: 1px solid var(--accent-cl);
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: background-color var(--fast-anim);
+}
+
+@mixin fonts($fw, $fs, $lh, $ls, $tt: false) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: setLineHeight($lh, $fs);
+  letter-spacing: $ls;
+
+  @if $tt {
+    text-transform: $tt;
+  }
+}
+
+// Calculating line-height value to multiplier
+@function setLineHeight($lh, $fs) {
+  $lh-no-units: strip-unit($lh);
+  $fs-no-units: strip-unit($fs);
+
+  $lh-value: $lh-no-units / $fs-no-units;
+
+  $line-height: decimal-round($lh-value, 2);
+
+  @return $line-height;
+}
+
+// Delete unit from incoming value
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function decimal-round($number, $digits: 0, $mode: round) {
+  $n: 1;
+  // $number must be a number
+  @if type-of($number) != number {
+    @warn '#{ $number } is not a number.';
+    @return $number;
+  }
+  // $digits must be a unitless number
+  @if type-of($digits) != number {
+    @warn '#{ $digits } is not a number.';
+    @return $number;
+  } @else if not unitless($digits) {
+    @warn '#{ $digits } has a unit.';
+    @return $number;
+  }
+  @for $i from 1 through $digits {
+    $n: $n * 10;
+  }
+  @if $mode == round {
+    @return round($number * $n) / $n;
+  } @else if $mode == ceil {
+    @return ceil($number * $n) / $n;
+  } @else if $mode == floor {
+    @return floor($number * $n) / $n;
+  } @else {
+    @warn '#{ $mode } is undefined keyword.';
+    @return $number;
+  }
+}
+
+@mixin transition($property) {
+  $duration: 250ms;
+  $timing-function: ease;
+
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+}
