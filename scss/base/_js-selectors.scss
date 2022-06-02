@@ -1,0 +1,11 @@
+.no-scroll {
+  overflow: hidden;
+}
+
+.js-no-transparency {
+  @include transition(background-color);
+  // transition: background-color var(--slow-anim), backdrop-filter var(--slow-anim);
+
+  background-color: rgba(16, 18, 27, 0.4);
+  backdrop-filter: blur(10px);
+}

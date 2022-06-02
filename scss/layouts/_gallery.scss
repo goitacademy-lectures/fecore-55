@@ -1,0 +1,46 @@
+/**
+  |============================
+  | Gallery section
+  |============================
+*/
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+
+.gallery .list {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 30px; */
+  /* margin-right: -30px; */
+  margin: -15px;
+}
+
+.gallery .item {
+  position: relative;
+  overflow: hidden;
+  /* margin-right: 30px; */
+  margin: 15px;
+  flex-basis: calc((100% - 120px) / 4);
+}
+
+/* .gallery .item:last-child {
+  margin-right: 0;
+} */
+
+.gallery .item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-45deg) translate(-80px, -10px);
+
+  content: attr(data-sale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ff6c00;
+}

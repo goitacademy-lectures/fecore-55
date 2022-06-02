@@ -1,0 +1,66 @@
+/**
+  |============================
+  | Hero section
+  |============================
+*/
+.hero {
+  max-width: 1280px;
+  min-height: 680px;
+  margin: 0 auto;
+  background-color: #191c26;
+  background-image: url(../images/hero/hero-bg.jpg),
+    linear-gradient(to right, #fff 12%, #191c26 12%);
+  background-size: 1125px 680px, contain;
+  background-position: top right, center;
+  background-repeat: no-repeat;
+}
+
+.hero__container {
+  position: relative;
+  display: flex;
+}
+
+.hero__left-side {
+  display: flex;
+  align-items: flex-end;
+
+  width: 100px;
+}
+
+.hero__list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: left top;
+}
+
+.hero__group {
+  flex-grow: 1;
+
+  margin-left: 100px;
+  margin-top: 272px;
+  margin-bottom: 206px;
+}
+
+.hero .uppertitle {
+  animation: expand 0.6s ease-in;
+}
+
+.hero .main-title {
+  margin-bottom: 20px;
+
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+
+  animation: fade-left-to-right 1s ease-out;
+}
+
+.hero .subtitle {
+  width: 476px;
+  animation: fade-bottom-to-top 2s ease;
+}
