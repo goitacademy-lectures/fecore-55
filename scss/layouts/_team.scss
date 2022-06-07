@@ -27,7 +27,11 @@
 }
 
 .member-item {
-  --items: 3;
+  --items: 1;
+
+  @include mq(desktop) {
+    --items: 3;
+  }
 }
 
 .member-group {
