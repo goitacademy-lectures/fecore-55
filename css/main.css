@@ -1459,11 +1459,72 @@ img {
   margin-right: auto;
   /* background-color: #111319; */
   /* Фонове зображення + градієнт */
-  background-image: url(../images/price/bg-price.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
-  background-image: url(../images/price/bg-price.png), linear-gradient(to bottom, #191c26, #191c26);
+  /**
+    |============================
+    | Завантаження звичайного фонового зображення для мобільної версії
+    |============================
+  */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: url(../images/price/bg-price_sm.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+  background-image: url(../images/price/bg-price_sm.png), linear-gradient(to bottom, #191c26, #191c26);
+  background-image: -webkit-image-set(url(../images/price/bg-price_sm.webp) 1x), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+  background-image: -webkit-image-set(url(../images/price/bg-price_sm.webp) 1x), linear-gradient(to bottom, #191c26, #191c26);
+  /**
+    |============================
+    | Завантаження звичайного фонового зображення для планшету
+    |============================
+  */
+  /**
+    |============================
+    | Завантаження звичайного фонового зображення для десктопної версії
+    |============================
+  */
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/bg-price_sm@2x.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: url(../images/price/bg-price_sm@2x.png), linear-gradient(to bottom, #191c26, #191c26);
+    background-image: -webkit-image-set(url(../images/price/bg-price_sm@2x.webp) 2x), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: -webkit-image-set(url(../images/price/bg-price_sm@2x.webp) 2x), linear-gradient(to bottom, #191c26, #191c26);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .price {
+    background-image: url(../images/price/bg-price_md.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: url(../images/price/bg-price_md.png), linear-gradient(to bottom, #191c26, #191c26);
+    background-image: -webkit-image-set(url(../images/price/bg-price_md.webp) 1x), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: -webkit-image-set(url(../images/price/bg-price_md.webp) 1x), linear-gradient(to bottom, #191c26, #191c26);
+    background-image: -webkit-image-set(url(../images/price/bg-price_md@2x.webp) 2x), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: -webkit-image-set(url(../images/price/bg-price_md@2x.webp) 2x), linear-gradient(to bottom, #191c26, #191c26);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/bg-price_md@2x.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: url(../images/price/bg-price_md@2x.png), linear-gradient(to bottom, #191c26, #191c26);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .price {
+    background-image: url(../images/price/bg-price_lg.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: url(../images/price/bg-price_lg.png), linear-gradient(to bottom, #191c26, #191c26);
+    background-image: -webkit-image-set(url(../images/price/bg-price_lg@2x.webp) 2x), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: -webkit-image-set(url(../images/price/bg-price_lg@2x.webp) 2x), linear-gradient(to bottom, #191c26, #191c26);
+    background-image: -webkit-image-set(url(../images/price/bg-price_lg@2x.webp) 2x), linear-gradient(to bottom, #191c26, #191c26);
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .price {
+    background-image: url(../images/price/bg-price_lg@2x.png), -webkit-gradient(linear, left top, left bottom, from(#191c26), to(#191c26));
+    background-image: url(../images/price/bg-price_lg@2x.png), linear-gradient(to bottom, #191c26, #191c26);
+  }
 }
 
 .price-list {
@@ -1713,8 +1774,6 @@ img {
   overflow: hidden;
   /* margin-right: 30px; */
   margin: 15px;
-  -ms-flex-preferred-size: calc((100% - 120px) / 4);
-      flex-basis: calc((100% - 120px) / 4);
 }
 
 /* .gallery .item:last-child {
@@ -1726,7 +1785,6 @@ img {
   left: 0;
   -webkit-transform: rotate(-45deg) translate(-80px, -10px);
           transform: rotate(-45deg) translate(-80px, -10px);
-  content: attr(data-sale);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -275,7 +275,7 @@
         </div>
       </section> -->
       <!-- Секція Про нас -->
-      <section class="about section" id="about">
+      <section class="about section" id="about" style="height: 300vh">
         <div class="container about__container">
           <ul class="about-list list">
             <li class="about-list__item">
@@ -314,7 +314,7 @@
         </div>
       </section>
       <!-- Секція Послуги та ціни -->
-      <!-- <section class="price section" id="price">
+      <section class="price section" id="price">
         <div class="container">
           <p class="uppertitle uppertitle--mode-dark">Проведи время в компании лучших мастеров</p>
           <h2 class="section-title section-title--mode-dark">Услуги и цены</h2>
@@ -352,7 +352,7 @@
           </ul>
           <button class="btn btn--mode-dark" type="button">онлайн-запись</button>
         </div>
-      </section> -->
+      </section>
       <!-- Секція Переваги -->
       <!-- <section class="benefits section">
         <div class="container benefits-container">
@@ -595,7 +595,7 @@
         </div>
       </section>
       <!-- Секція Галерея -->
-      <!-- <section class="gallery section">
+      <section class="gallery section">
         <div class="container">
           <p class="uppertitle uppertitle--mode-light gallery-uppertitle">
             На латинском языке “барба” означает “борода”
@@ -605,42 +605,139 @@
             <li class="item" data-sale="Скидка 50%">
               <img
                 class="gallery-img"
-                src="./images/gallery/gallery-img-1.jpg"
+                srcset="
+                  ./images/gallery/gallery-1_sm.jpg    1x,
+                  ./images/gallery/gallery-1_sm@2x.jpg 2x
+                "
+                src="./images/gallery/gallery-1_sm.jpg"
                 alt=""
-                width="270"
+                width="418"
                 height="360"
+                loading="lazy"
               />
             </li>
             <li class="item" data-sale="Скидка 20%">
               <img
                 class="gallery-img"
-                src="./images/gallery/gallery-img-2.jpg"
+                srcset="
+                  ./images/gallery/w/gallery-1_270.jpg 270w,
+                  ./images/gallery/w/gallery-1_330.jpg 330w,
+                  ./images/gallery/w/gallery-1_418.jpg 418w,
+                  ./images/gallery/w/gallery-1_540.jpg 540w,
+                  ./images/gallery/w/gallery-1_660.jpg 660w,
+                  ./images/gallery/w/gallery-1_836.jpg 836w
+                "
+                sizes="(min-width: 1280) 270px, (min-width: 768) 330px, (max-width: 767) 418px, 100vw"
+                src="./images/gallery/w/gallery-1_418.jpg"
                 alt=""
-                width="270"
+                width="418"
                 height="360"
+                loading="lazy"
               />
             </li>
             <li class="item" data-sale="Скидка 30%">
-              <img
-                class="gallery-img"
-                src="./images/gallery/gallery-img-3.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <!-- Набір зображень для десктопних екранів -->
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-3_lg.webp    1x,
+                    ./images/gallery/gallery-3_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-3_lg.jpg    1x,
+                    ./images/gallery/gallery-3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Набір зображень для планшетних екранів -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-3_md.webp    1x,
+                    ./images/gallery/gallery-3_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-3_md.jpg    1x,
+                    ./images/gallery/gallery-3_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Набір зображень для мобільних екранів -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-3_sm.webp    1x,
+                    ./images/gallery/gallery-3_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-3_sm.jpg    1x,
+                    ./images/gallery/gallery-3_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/gallery-3_sm.jpg"
+                  alt=""
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="item" data-sale="Скидка 10%">
-              <img
-                class="gallery-img"
-                src="./images/gallery/gallery-img-4.jpg"
-                alt=""
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/gallery/gallery-4_lg.jpg    1x,
+                    ./images/gallery/gallery-4_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/gallery/gallery-4_md.jpg    1x,
+                    ./images/gallery/gallery-4_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/gallery/gallery-4_sm.jpg    1x,
+                    ./images/gallery/gallery-4_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/gallery-4_sm.jpg"
+                  alt="haircut"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Секція Контакти -->
       <!-- <section class="contacts section" id="contacts">
         <div class="container">

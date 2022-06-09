@@ -7,14 +7,71 @@
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+
   /* background-color: #111319; */
   /* Фонове зображення + градієнт */
-  background-image: url(../images/price/bg-price.png), linear-gradient(to bottom, #191c26, #191c26);
-
+  /**
+    |============================
+    | Завантаження звичайного фонового зображення для мобільної версії
+    |============================
+  */
   background-repeat: no-repeat;
   background-position: center;
-
   background-size: cover;
+
+  background-image: url(../images/price/bg-price_sm.png),
+    linear-gradient(to bottom, #191c26, #191c26);
+  background-image: -webkit-image-set(url(../images/price/bg-price_sm.webp) 1x),
+    linear-gradient(to bottom, #191c26, #191c26);
+
+  // Завантаження ретінізованого 2х фонового зображення
+  @include mq(retina) {
+    background-image: url(../images/price/bg-price_sm@2x.png),
+      linear-gradient(to bottom, #191c26, #191c26);
+
+    background-image: -webkit-image-set(url(../images/price/bg-price_sm@2x.webp) 2x),
+      linear-gradient(to bottom, #191c26, #191c26);
+  }
+
+  /**
+    |============================
+    | Завантаження звичайного фонового зображення для планшету
+    |============================
+  */
+  @include mq(tablet) {
+    background-image: url(../images/price/bg-price_md.png),
+      linear-gradient(to bottom, #191c26, #191c26);
+    background-image: -webkit-image-set(url(../images/price/bg-price_md.webp) 1x),
+      linear-gradient(to bottom, #191c26, #191c26);
+
+    // Завантаження ретінізованого 2х фонового зображення
+    @include mq(retina) {
+      background-image: url(../images/price/bg-price_md@2x.png),
+        linear-gradient(to bottom, #191c26, #191c26);
+    }
+    background-image: -webkit-image-set(url(../images/price/bg-price_md@2x.webp) 2x),
+      linear-gradient(to bottom, #191c26, #191c26);
+  }
+
+  /**
+    |============================
+    | Завантаження звичайного фонового зображення для десктопної версії
+    |============================
+  */
+  @include mq(desktop) {
+    background-image: url(../images/price/bg-price_lg.png),
+      linear-gradient(to bottom, #191c26, #191c26);
+    background-image: -webkit-image-set(url(../images/price/bg-price_lg@2x.webp) 2x),
+      linear-gradient(to bottom, #191c26, #191c26);
+
+    // Завантаження ретінізованого 2х фонового зображення
+    @include mq(retina) {
+      background-image: url(../images/price/bg-price_lg@2x.png),
+        linear-gradient(to bottom, #191c26, #191c26);
+    }
+    background-image: -webkit-image-set(url(../images/price/bg-price_lg@2x.webp) 2x),
+      linear-gradient(to bottom, #191c26, #191c26);
+  }
 }
 
 .price-list {

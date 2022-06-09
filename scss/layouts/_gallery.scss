@@ -20,7 +20,7 @@
   overflow: hidden;
   /* margin-right: 30px; */
   margin: 15px;
-  flex-basis: calc((100% - 120px) / 4);
+  // flex-basis: calc((100% - 120px) / 4);
 }
 
 /* .gallery .item:last-child {
@@ -33,7 +33,7 @@
   left: 0;
   transform: rotate(-45deg) translate(-80px, -10px);
 
-  content: attr(data-sale);
+  // content: attr(data-sale);
   display: flex;
   align-items: center;
   justify-content: center;
